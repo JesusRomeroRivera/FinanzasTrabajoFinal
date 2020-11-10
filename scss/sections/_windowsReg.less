@@ -1,0 +1,127 @@
+.establecimiento{
+    height: 55vh;
+    position: absolute;
+    top: 45vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 12vw;
+    display: flex;
+    justify-content: center;
+    left: -3000px;
+    &.not-active{
+        .not-visible-fast;
+    }
+    &.is-active{
+        .visible;
+    }
+    .form-container{
+        width: 700px;
+        height: 46vh;
+        display: grid;
+        padding: 5px 20px;
+        background-color: rgba(210, 210, 210, 0.5);
+        border-radius: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas: "f f" "s t" "fo fi" "si si" "se se" "te te";
+        .establecimiento-text{
+            opacity: 1;
+            display: grid;
+            grid-area: f;
+            justify-content: left;
+            align-items: center;
+            margin: 5px;
+        }
+        input{
+            .input-design();
+        }
+        .final-input{
+            grid-area: si;
+        }
+        .register-button{
+            grid-area: se;
+            margin-top: 15px;
+        }
+        .establecimiento-text-2{
+            grid-area: te;
+            font-size: 12px;
+            text-align: center;
+            padding: 15px 125px;
+            margin: 0;
+            .principal-button{
+                .ancle-design();
+            }
+        }
+    }
+}
+.clientes{
+    height: 55vh;
+    position: absolute;
+    top: 45vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 12vw;
+    display: flex;
+    justify-content: center;
+    left: -3000px;
+    &.not-active{
+        .not-visible-fast;
+    }
+    &.is-active{
+        .visible;
+    }
+    .form-container{
+        width: 700px;
+        height: 46vh;
+        display: grid;
+        padding: 5px 20px;
+        background-color: rgba(210, 210, 210, 0.5);
+        border-radius: 30px;
+        grid-template-columns: 84px 3fr 4fr;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas: "f f f" "s s t" "fo fo fi" "tipo doc si" "se se se" "te te te" "el el el";
+        .clientes-text{
+            opacity: 1;
+            display: grid;
+            grid-area: f;
+            justify-content: left;
+            align-items: center;
+            margin: 5px;
+        }
+        input{
+            margin: 5px;
+            border-radius: 7.5px;
+            padding-left: 10px;
+            border: 1px solid #767676;
+        }
+        select{
+            margin: 5px 1px 5px 5px;
+            border-radius: 7.5px;
+            padding-left: 5px;
+            border: 1px solid #767676;   
+            color: #767676;
+        }
+        .first-input{ grid-area: s; }
+        .s-input{ grid-area: t; }
+        .t-input{ grid-area: fo; }
+        .f-input{ grid-area: fi; }
+        .fi-input{ grid-area: tipo; }
+        .si-input{ grid-area: doc; }
+        .se-input{ grid-area: si; }
+        .final-input{ grid-area: se; }
+        .register-button{
+            grid-area: te;
+            margin-top: 15px;
+        }
+        .clientes-text-2{
+            grid-area: el;
+            font-size: 12px;
+            text-align: center;
+            padding: 15px 125px;
+            margin: 0;
+            .principal-button2{
+                .ancle-design();
+            }
+        }
+    }
+}

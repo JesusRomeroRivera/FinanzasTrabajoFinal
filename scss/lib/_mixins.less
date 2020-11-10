@@ -1,0 +1,158 @@
+.not-visible() {
+  animation-name: modaOut;
+  @keyframes modaOut {
+    0% {
+      left: 0px;
+    }
+    10% {
+      left: -20px;
+    }
+    60% {
+      left:(-35px);
+    }
+    75% {
+      left:(0px);
+    }
+    100% {
+      left:(-3000px);
+    }
+  }
+  animation-fill-mode: forwards;
+  animation-duration: @modal-time;
+}
+
+.not-visible-fast() {
+  animation-name: modaOutFast;
+  @keyframes modaOutFast {
+    0% {
+      left: 0px;
+    }
+    100% {
+      right:(-3000px);
+    }
+  }
+  animation-fill-mode: forwards;
+  animation-duration: @modal-time;
+}
+
+.visible() {
+  animation-name: modaIn;
+  @keyframes modaIn {
+      0% {
+        left:-3000px;
+      }
+      60% {
+        left: 0px;
+      }
+      75% {
+        left: -35px;
+      }
+      90% {
+        left: 0px;
+      }
+      100% {
+        left: 0;
+      }
+  }
+  animation-fill-mode: forwards;
+  animation-duration: @modal-time;
+}
+
+.total-width() {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.all-center () {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ancle-design(){
+  cursor: pointer;
+  font-style: normal;
+  color: rgb(74, 123, 255);
+  &:hover{
+    text-decoration: underline;
+    color:rgb(0, 86, 179);
+    }
+}
+
+.background-design(){
+  height: 80vh;
+  background-image: url("../assets/images/fondo.jpg");
+  background-size: cover;
+}
+
+.back-design(){
+  padding: 15px 30px;
+  a{
+    width: 55px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    i{
+      cursor: pointer;
+      margin-right: 5px;
+      margin-top: 1px;
+    }
+    p{
+      margin: 0;
+      cursor: pointer;
+      font-style: normal;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.back-design-popUp(){
+  padding: 15px 30px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  i{
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: 1px;
+  }
+  p{
+    margin: 0;
+    cursor: pointer;
+    font-style: normal;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.button-design(){
+  width: 120px;
+  height: 40px;
+  border-radius: 7.5px;
+  border: 1px solid black;  
+}
+
+.input-design(){
+  margin: 5px;
+  border-radius: 7.5px;
+  padding-left: 10px;
+  border: 1px solid #767676;  
+}
+
+.display-design(){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-design(){
+  margin-top: 5px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+}
