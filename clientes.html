@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/master.css">
+    <title>BNPT</title>
+  </head>
+  <body>
+    <header class="header2">
+        <div class="header2-container">
+            <p class="header2-title">BNPT</p>
+            <div class="header2-profile">
+              <img class="header2-img" src="assets/images/silueta.png" alt="">
+              <div class="header2-values">
+                <p class="header2-text">Nombre_Establecimiento</p>
+                <span class="header2-actualiza" >Actualiza los datos</span>
+              </div>
+              <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+              </div>
+            </div>
+        </div>
+        <div class="header2-nav">
+            <ol class="header2-nav-ol">
+                <li><a href="principal-page.html">Inicio</a></li>
+                <li><a class="active" href="">Clientes</a></li>
+                <li><a href="reportes.html">Reportes</a></li>
+                <li><a href="mapa.html">Mapa</a></li>
+            </ol>
+        </div>
+        <div class="header2-othernav">
+
+        </div>
+    </header>
+    <section class="cliente">
+        <div class="nuevos-clientes">
+            <h1 class="nuevos-title">Nuevos Clientes</h1>
+            <div class="nuevos-table">
+                <div class="nuevos-headers">
+                    <p class="nuevos-item">-</p>
+                    <p class="nuevos-item">Nombre</p>
+                    <p class="nuevos-item">Crédito</p>
+                    <p class="nuevos-item">Tipo de Tasa</p>
+                    <p class="nuevos-item">Tasa (%)</p>
+                </div>
+                <div class="nuevos-tbody">
+                    <div class="tbody-cliente">
+                        <div class="nuevos-item"><input type="checkbox" class="checkbox-" id=""></div>
+                        <p class="nuevos-item nombre">Ricardo Rojas</p>
+                        <div class="nuevos-item credito">
+                          <input class="input-credito" type="text" name="numero" id="" placeholder="Crédito">
+                          <div class="item-radio"><input type="checkbox"><span>S./</span></div>
+                          <div class="item-radio"><input type="checkbox"><span>$</span></div>
+                        </div>
+                        <select class="nuevos-item tipoTasa custom-select" id="inputGroupSelect01">
+                          <option selected>Elige...</option>
+                          <option value="1">TNA</option>
+                          <option value="2">TEA</option>
+                          <option value="3">TSA</option>
+                        </select>
+                        <div class="nuevos-item tasa"><input class="input-tasa" type="text" name="numero" id="" placeholder="Tasa"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="nuevos-footer">
+                <button class="guardar-button">Guardar</button>
+                <button class="cancelar-button">Cancelar</button>
+            </div>
+        </div>
+        <div class="actual-clientes">
+            <div class="actual-container">
+                <h1 class="actual-title">Clientes Actuales</h1>
+                <input class="actual-input" type="text" placeholder="Buscar...">
+            </div>
+            <div class="actual-table">
+                <div class="actual-headers">
+                    <p class="actual-item">Nombre</p>
+                    <p class="actual-item">Moneda</p>
+                    <p class="actual-item">Crédito</p>
+                    <p class="actual-item">Tasa</p>
+                </div>
+                <div class="actual-tbody">
+                    <div class="tbody-actual">
+                        <p class="actual-item">Nombre</p>
+                        <p class="actual-item">Moneda</p>
+                        <p class="actual-item">Num_1</p>
+                        <p class="actual-item">Tasa (%)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="actual-footer">
+                <p class="actual-total">Total:</p>
+                <p class="actual-text">#</p>
+                <p class="actual-textRelleno">Clientes </p>
+                <p class="actual-total">Créditos:</p>
+                <p class="actual-total">Num_1</p>
+                <p class="actual-total">Num_2</p>
+            </div>
+        </div>
+    </section>
+    <section class="actualiza">
+      <div class="actualiza-back">
+        <i class="icon-circle-left" margin-top="1px"></i>
+        <p class="actualiza-back-text">Back</p>
+      </div>
+      <div class="actualiza-container">
+        <h1 class="actualiza-title">Actualiza tus datos</h1>
+        <input class="first-input" type="text" placeholder="Correo electrónico actual*" name="email" required>
+        <input type="pwd" placeholder="Contraseña actual*" name="psw" required>
+        <div class="actualiza-line"></div>
+        <input type="name" placeholder="Nombre del establecimiento *" name="name" required>
+        <input type="phone" placeholder="Número del teléfono celular *" name="phone" required>
+        <input class="final-input" type="direc" placeholder="Dirección *" name="direc" required>
+        <button type="submit" class="btn btn-light register-button">Actualizar</button>  
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script/script2.js"></script>
+  </body>
+</html>

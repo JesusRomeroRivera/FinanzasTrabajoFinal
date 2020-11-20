@@ -37,4 +37,3 @@ function showCliente(){
     if($formEstable.classList.contains("is-active")) $formEstable.classList.add("not-active");
     $formEstable.classList.remove("is-active");
 }
-
