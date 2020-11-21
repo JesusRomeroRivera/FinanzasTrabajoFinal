@@ -49,6 +49,14 @@ public class Compra {
 		this.id = id;
 	}
 
+	public Credito getCredito() {
+		return this.credito;
+	}
+
+	public void setCredito(Credito credito) {
+		this.credito = credito;
+	}
+
 	public String getDescripcion() {
 		return this.descripcion;
 	}
@@ -80,5 +88,4 @@ public class Compra {
 	public void setTipoMoneda(String tipoMoneda) {
 		this.tipoMoneda = tipoMoneda;
 	}
-
 }
