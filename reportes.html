@@ -36,37 +36,48 @@
 
         </div>
     </header>
-    <section class="resumen">
-      <div class="resumen-container">
-        <h1 class="resumen-title">Resumen</h1> 
-        <div class="resumen-child">
-          <p class="resumen-text">Ventas del día</p>
-          <span class="resumen-number1">Num_1</span>
-          <span class="resumen-number2">Num_2</span>
+    <section class="reportes">
+      <div class="reportes-header">
+        <div class="reportes-date">
+          <label for="desde" class="reportes-desde">Desde:</label>
+          <input type="date" name="desde" id="">
+          <label for="hasta" class="reportes-desde">Hasta:</label>
+          <input type="date" name="hasta" id="">
         </div>
-        <div class="resumen-child">
-          <p class="resumen-text">Créditos otorgados en el día</p>
-          <span class="resumen-number1">Num_1</span>
-          <span class="resumen-number2">Num_2</span>
-        </div>
-        <div class="resumen-child">
-          <p class="resumen-text">Cobros del día</p>
-          <span class="resumen-number1">Num_1</span>
-          <span class="resumen-number2">Num_2</span>
+        <div class="reportes-button">
+          <button class="repotes-generar btn-light">Generar</button>
+          <button class="repotes-imprimir btn-light">Imprimir</button>
+          <button class="repotes-limpiar btn-light">Limpiar</button>
         </div>
       </div>
-      <div class="cobros-container">
-        <h1 class="cobros-title">Cobros pendientes</h1> 
-        <div class="cobros-child">
-          <p class="cobros-text">Deuda total</p>
-          <span class="cobros-number1">Num_1</span>
-          <span class="cobros-number2">Num_2</span>
-        </div>
-        <div class="cobros-child">
-          <p class="cobros-text">Total de clientes que deben</p>
-          <span class="cobros-number1">Num_1</span>
-        </div>
+    </section>
+    <section class="table">
+      <div class="table-headers">
+        <p class="table-item">Nombre</p>
+        <p class="table-item">Documento de Identidad</p>
+        <p class="table-item">Número de Teléfono Celular</p>
+        <p class="table-item">Dirección</p>
+        <p class="table-item">Crédito</p>
+        <p class="table-item">Deuda</p>
       </div>
+      <div class="table-tbody">
+        <div class="tbody-table">
+            <p class="table-item">Nombre</p>
+            <p class="table-item">DNI num_1</p>
+            <p class="table-item">### ### ###</p>
+            <p class="table-item">Dirección - ...</p>
+            <p class="table-item">S./($) ##.##</p>
+            <p class="table-item">S./($) ##.##</p>
+        </div>
+    </div>
+    </section>
+    <section class="datos">
+      <p class="datos-total">Total:</p>
+      <p class="datos-text">#</p>
+      <p class="datos-textRelleno">Clientes </p>
+      <p class="datos-total">Créditos:</p>
+      <p class="datos-total">Num_1</p>
+      <p class="datos-total">Num_2</p>
     </section>
     <section class="actualiza">
       <div class="actualiza-back">

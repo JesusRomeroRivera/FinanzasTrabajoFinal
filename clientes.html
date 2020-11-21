@@ -52,9 +52,11 @@
                         <div class="nuevos-item"><input type="checkbox" class="checkbox-" id=""></div>
                         <p class="nuevos-item nombre">Ricardo Rojas</p>
                         <div class="nuevos-item credito">
-                          <input class="input-credito" type="text" name="numero" id="" placeholder="Crédito">
-                          <div class="item-radio"><input type="checkbox"><span>S./</span></div>
-                          <div class="item-radio"><input type="checkbox"><span>$</span></div>
+                          <input class="input-credito" type="number" name="numero" id="" placeholder="Crédito">
+                          <select class="tipoCredito custom-select" id="inputGroupSelect01">
+                            <option selected>S./</option>
+                            <option value="1">$</option>
+                          </select>
                         </div>
                         <select class="nuevos-item tipoTasa custom-select" id="inputGroupSelect01">
                           <option selected>Elige...</option>
@@ -62,7 +64,7 @@
                           <option value="2">TEA</option>
                           <option value="3">TSA</option>
                         </select>
-                        <div class="nuevos-item tasa"><input class="input-tasa" type="text" name="numero" id="" placeholder="Tasa"></div>
+                        <div class="nuevos-item tasa"><input class="input-tasa" type="number" name="numero" id="" placeholder="Tasa"></div>
                     </div>
                 </div>
             </div>
