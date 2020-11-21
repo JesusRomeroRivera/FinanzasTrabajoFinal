@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BnptApplication<bnpt>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.grupo6.bnpt.BnptApplication",
+            "projectName": "bnpt",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-BnptApplication<bnpt>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.bnpt.BnptApplication",
+            "projectName": "bnpt",
+            "args": ""
+        }
+    ]
+}
