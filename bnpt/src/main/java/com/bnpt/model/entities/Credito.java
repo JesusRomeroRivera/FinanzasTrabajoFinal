@@ -35,9 +35,12 @@ public class Credito {
     @JoinColumn(name = "cliente_id")
     Cliente cliente;
 
-	@ManyToOne
-	@JoinColumn(name = "tasa_interes_id", nullable = false)
-	private TasaInteres tasaInteres;
+	@Column(name = "tipo_tasa_interes", nullable = false, length = 3)
+    private String tipoTasaInteres;
+	
+	@DecimalMin("0.00")
+    @Column(name = "valor_tasa_interes", nullable = false)
+    private float valorTasaInteres;
 
     @DecimalMin("0.00")
     @Column(name = "credito_inicial", nullable = false)
@@ -81,12 +84,20 @@ public class Credito {
         this.cliente = cliente;
     }
 
-    public TasaInteres getTasaInteres() {
-        return this.tasaInteres;
+    public String getTipoTasaInteres() {
+        return this.tipoTasaInteres;
     }
 
-    public void setTasaInteres(TasaInteres tasaInteres) {
-        this.tasaInteres = tasaInteres;
+    public void setTipoTasaInteres(String tipoTasaInteres) {
+        this.tipoTasaInteres = tipoTasaInteres;
+    }
+
+    public float getValorTasaInteres() {
+        return this.valorTasaInteres;
+    }
+
+    public void setValorTasaInteres(float valorTasaInteres) {
+        this.valorTasaInteres = valorTasaInteres;
     }
 
     public float getCreditoInicial() {
