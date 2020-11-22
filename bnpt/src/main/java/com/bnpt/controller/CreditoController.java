@@ -50,6 +50,22 @@ public class CreditoController {
 		
 		return new ResponseEntity<Credito>(Credito.get(), HttpStatus.OK);
 	}
+
+	@ApiOperation("Retorna la créditos asociados al cliente correspondiente al id dado")
+	@GetMapping(value = "/Cliente/{id}")
+	public ResponseEntity<List<Credito>> listarPorClienteId(@PathVariable("id") String id) {
+		List<Credito> Creditos = CreditoService.listarPorClienteId(id);
+		
+		return new ResponseEntity<List<Credito>>(Creditos, HttpStatus.OK);
+	}
+
+	@ApiOperation("Retorna la créditos activos asociados al cliente correspondiente al id dado")
+	@GetMapping(value = "/Cliente/{id}/Activos")
+	public ResponseEntity<List<Credito>> listarActivosPorClienteId(@PathVariable("id") String id) {
+		List<Credito> Creditos = CreditoService.listarActivosPorClienteId(id);
+		
+		return new ResponseEntity<List<Credito>>(Creditos, HttpStatus.OK);
+	}
 	
 	@ApiOperation("Registra una Credito")
 	@PostMapping

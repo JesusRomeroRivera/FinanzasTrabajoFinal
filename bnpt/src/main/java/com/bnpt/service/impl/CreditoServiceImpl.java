@@ -40,4 +40,14 @@ public class CreditoServiceImpl implements CreditoService{
 	public List<Credito> listar() {
 		return CreditoRepository.findAll();
 	}
+
+	@Override
+	public List<Credito> listarPorClienteId(String id) {
+		return CreditoRepository.getCreditosCliente(id);
+	}
+
+	@Override
+	public List<Credito> listarActivosPorClienteId(String id) {
+		return CreditoRepository.getCreditosActivosCliente(id);
+	}
 }

@@ -47,7 +47,6 @@ public class ClienteController {
 		if (!Cliente.isPresent()) {
 			throw new ModeloNotFoundException("ID: " + id);
 		}
-		
 		return new ResponseEntity<Cliente>(Cliente.get(), HttpStatus.OK);
 	}
 	

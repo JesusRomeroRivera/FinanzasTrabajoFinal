@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.bnpt.exception.GenericException;
 import com.bnpt.exception.ModeloNotFoundException;
 import com.bnpt.model.entities.Compra;
 import com.bnpt.service.CompraService;
@@ -55,7 +56,17 @@ public class CompraController {
 	@PostMapping
 	public ResponseEntity<Compra> registrar(@Valid @RequestBody Compra Compra){
 		Compra CompraNew = new Compra();
-		CompraNew = CompraService.registrar(Compra);
+
+		try{
+			CompraNew = CompraService.registrar(Compra);
+		}
+		catch(GenericException e){
+			switch(e.getMessage()){
+				case "CreditoRestanteInsuficiente":
+				throw new ModeloNotFoundException("Crédito restante insuficiente");
+			}
+		}
+
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(CompraNew.getId()).toUri();
 		return ResponseEntity.created(location).build();		
 	}

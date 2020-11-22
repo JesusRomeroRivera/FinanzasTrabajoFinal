@@ -41,6 +41,11 @@ public class Compra {
     @Column(name = "tipo_moneda", nullable = false, length = 3)
 	private String tipoMoneda;
 
+	//1 -> Realiazada
+	//0 -> No realizada
+    @Column(name = "status_compra", nullable = false, length = 3)
+	private Boolean statusCompra;
+
 	public int getId() {
 		return this.id;
 	}
@@ -87,5 +92,17 @@ public class Compra {
 
 	public void setTipoMoneda(String tipoMoneda) {
 		this.tipoMoneda = tipoMoneda;
+	}
+
+	public Boolean isStatusCompra() {
+		return this.statusCompra;
+	}
+
+	public Boolean getStatusCompra() {
+		return this.statusCompra;
+	}
+
+	public void setStatusCompra(Boolean statusCompra) {
+		this.statusCompra = statusCompra;
 	}
 }
