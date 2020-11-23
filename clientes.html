@@ -33,7 +33,11 @@
             </ol>
         </div>
         <div class="header2-othernav">
-
+          <ol class="header2-on-nav-ol">
+            <li><a class="seguridad-button">Seguridad</a></li>
+            <li><a class="productos-button">Productos</a></li>
+            <li><a class="regreso-button" href="index.html">Cerrar sesión</a></li>
+          </ol>
         </div>
     </header>
     <section class="cliente">
@@ -69,30 +73,30 @@
                 </div>
             </div>
             <div class="nuevos-footer">
-                <button class="guardar-button">Guardar</button>
+                <button class="guardar-button">Ver Monto</button>
                 <button class="cancelar-button">Cancelar</button>
             </div>
         </div>
         <div class="actual-clientes">
             <div class="actual-container">
-                <h1 class="actual-title">Clientes Actuales</h1>
-                <input class="actual-input" type="text" placeholder="Buscar...">
+              <h1 class="actual-title">Clientes Actuales</h1>
+              <input class="actual-input" type="text" placeholder="Buscar...">
             </div>
             <div class="actual-table">
-                <div class="actual-headers">
-                    <p class="actual-item">Nombre</p>
-                    <p class="actual-item">Moneda</p>
-                    <p class="actual-item">Crédito</p>
-                    <p class="actual-item">Tasa</p>
+              <div class="actual-headers">
+                <p class="actual-item">Nombre</p>
+                <p class="actual-item">Moneda</p>
+                <p class="actual-item">Crédito</p>
+                <p class="actual-item">Tasa</p>
+              </div>
+              <div class="actual-tbody" href="">
+                <div class="tbody-actual">
+                  <p class="actual-item">Nombre</p>
+                  <p class="actual-item">Moneda</p>
+                  <p class="actual-item">Num_1</p>
+                  <p class="actual-item">Tasa (%)</p>
                 </div>
-                <div class="actual-tbody">
-                    <div class="tbody-actual">
-                        <p class="actual-item">Nombre</p>
-                        <p class="actual-item">Moneda</p>
-                        <p class="actual-item">Num_1</p>
-                        <p class="actual-item">Tasa (%)</p>
-                    </div>
-                </div>
+              </div>
             </div>
             <div class="actual-footer">
                 <p class="actual-total">Total:</p>
@@ -103,6 +107,180 @@
                 <p class="actual-total">Num_2</p>
             </div>
         </div>
+    </section>
+    <section class="datosCliente">
+      <div class="datosCliente-back">
+        <i class="icon-circle-left" margin-top="1px"></i>
+        <p class="datosCliente-back-text">Back</p>
+      </div>
+      <div class="datosCliente-container">
+        <div class="creditoCliente">
+          <div class="credito-title">
+            <p class="credito-title-text">Crédito aprobado: </p>
+            <span class="credito-title-number">S./ ###.##</span>
+            <h1 class="credito-title-name">Nombre_Cliente</h1>
+            <p class="credito-title-ancle">Cobrar</p>
+            <p class="credito-title-text">Tasa: </p>
+            <span class="credito-title-number">TNA 20%</span>
+          </div>
+          <div class="contenido">
+            <div class="contenido-text-container">
+              <p class="contenido-text">Pago de la quincena</p>
+              <span class="contenido-number">S./ ###.##</span>
+            </div>
+            <div class="contenido-barra">
+              <div class="contenido-barra-text">
+                <div class="contenido-barra-text-container">
+                  <p class="contenido-barraConsumido">Disponible: </p>
+                  <span class="contenido-barraText">S./ ###.##</span>  
+                </div>
+                <div class="contenido-barra-text-container">
+                  <p class="contenido-barraConsumido">Consumido: </p>
+                  <span class="contenido-barraText">S./ ###.##</span>
+                </div>
+              </div>
+              <div class="contenido-barraProgress">
+                <progress value="70" max="100"></progress>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="datosEnSi">
+          <h1 class="datos-title">Datos</h1>
+          <div class="datos-container">
+            <div class="datos-containerText">
+              <p class="datos-text">Nombres: </p>
+              <span class="datos-value">_Name_</span>
+            </div>
+            <div class="datos-containerText">
+              <p class="datos-text">Apellidos: </p>
+              <span class="datos-value">_Surname_</span>
+            </div>
+            <div class="datos-containerText">
+              <p class="datos-text">Celular: </p>
+              <span class="datos-value">### ### ###</span>
+            </div>
+            <div class="datos-containerText">
+              <p class="datos-text">Dni: </p>
+              <span class="datos-value">#########</span>
+            </div>
+            <div class="datos-containerText">
+              <p class="datos-text">Dirección: </p>
+              <span class="datos-value">@___@</span>
+            </div>
+          </div>
+        </div>
+        <div class="movimientosCliente">
+          <h1 class="movimientos-title">Movimientos</h1>
+          <div class="movimientos-container">
+            <div class="movimientos-actual">
+              <p class="movimientos-item">Fecha</p>
+              <p class="movimientos-item">¿Qué es?</p>
+              <p class="movimientos-item">+-Num_1</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cobrar">
+      <div class="cobrar-back">
+        <i class="icon-circle-left" margin-top="1px"></i>
+        <p class="cobrar-back-text">Back</p>
+      </div>
+      <div class="cobrar-container">
+        <h1 class="cobrar-title">Resumen</h1>
+        <div class="cobrar-containerText">
+          <p class="cobrar-text">Pagos de la quincena: </p>
+          <span class="cobrar-value">S./ ##.##</span>
+        </div>
+        <div class="cobrar-containerText">
+          <p class="cobrar-text">Mantenimiento de cuenta: </p>
+          <span class="cobrar-value">S./ ##.##</span>
+        </div>
+        <div class="cobrar-line"></div>
+        <div class="cobrar-containerText">
+          <p class="cobrar-text">Total: </p>
+          <span class="cobrar-value">S./ ##.##</span>
+        </div>
+        <div class="cobrar-buttons">
+          <p class="cobrar-buttons-text">¿Cobrar?</p>
+          <button class="cobrar-button">Sí, cobrar</button>
+        </div>
+      </div>
+    </section>
+    <section class="monto">
+      <div class="monto-back">
+        <i class="icon-circle-left" margin-top="1px"></i>
+        <p class="monto-back-text">Back</p>
+      </div>
+      <div class="monto-container">
+        <h1 class="monto-title">Monto Final</h1>
+        <div class="monto-containerText">
+          <p class="monto-text">Monto a cobrar por el cliente: </p>
+          <span class="monto-value">S./ ##.##</span>
+        </div>
+        <div class="monto-buttons">
+          <p class="monto-buttons-text">¿Guardar Cliente?</p>
+          <button class="monto-button">Guardar</button>
+        </div>
+      </div>
+    </section>
+    <section class="seguridad">
+      <div class="seguridad-back">
+        <i class="icon-circle-left" margin-top="1px"></i>
+        <p class="seguridad-back-text">Back</p>
+      </div>
+      <div class="seguridad-container">
+        <h1 class="seguridad-title">Cambia tu usuario y contraseña</h1>
+        <input class="first-input" type="email" placeholder="Correo electrónico actual*" name="email" required>
+        <input type="password" placeholder="Contraseña actual*" name="psw" required>
+        <div class="seguridad-line"></div>
+        <input class="intermed-input" type="email" placeholder="Nuevo correo electrónico (usuario) *" name="newEmail" required>
+        <input type="password" placeholder="Nueva contraseña *" name="phone" required>
+        <input type="password" placeholder="Repita la nueva contraseña *" name="direc" required>
+        <button type="submit" class="btn btn-light register-button">Actualizar</button>  
+      </div>
+    </section>
+    <section class="productos">
+      <div class="productos-back">
+        <i class="icon-circle-left" margin-top="1px"></i>
+        <p class="productos-back-text">Back</p>
+      </div>
+      <div class="productos-container">
+        <h1 class="productos-title">Lista de productos que vendes</h1>
+        <div class="productos-table">
+          <div class="productos-headers">
+            <p class="actual-item">Categoría</p>
+            <p class="actual-item">Producto</p>
+            <p class="actual-item">Precio S./</p>
+            <p class="actual-item">Precio $</p>
+          </div>
+          <div class="productos-tbody">
+            <div class="tbody-actual">
+              <p class="actual-item">Cat_name</p>
+              <p class="actual-item">Descripción</p>
+              <p class="actual-item">S./ ##.##</p>
+              <p class="actual-item">$ ##.##</p>
+            </div>
+          </div>
+        </div>
+        <div class="productos-footer">
+          <button class="agregarProducto-button">Agregar Producto</button>
+        </div>  
+      </div>
+    </section>
+    <section class="agregarProducto">
+      <div class="agregarProducto-back">
+        <i class="icon-circle-left" margin-top="1px"></i>
+        <p class="agregarProducto-back-text">Back</p>
+      </div>
+      <div class="agregarProducto-container">
+        <input type="text" placeholder="Nombre" name="name" required>
+        <input type="text" placeholder="Descripción" name="descrip" required>
+        <input type="text" placeholder="Precio en S./" name="precioS" required>
+        <input type="text" placeholder="Precio en $ *" name="precioDo" required>
+        <button type="submit" class="btn btn-light agregarProducto-button-salir">Agregar Producto</button>  
+      </div>
     </section>
     <section class="actualiza">
       <div class="actualiza-back">
@@ -123,6 +301,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="script/script2.js"></script>
+    <script src="script/cliente.js"></script>
   </body>
 </html>

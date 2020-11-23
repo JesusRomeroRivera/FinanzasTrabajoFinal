@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/master.css">
+    <title>BNPT</title>
+  </head>
+  <body>
+    <header class="header2">
+        <div class="header2-container">
+            <p class="header2-title">BNPT</p>
+            <div class="header2-profile">
+              <img class="header2-img" src="assets/images/silueta.png" alt="">
+              <div class="header2-values">
+                <p class="header2-text">Nombre_Establecimiento</p>
+                <span class="header2-actualiza" >Actualiza los datos</span>
+              </div>
+              <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+              </div>
+            </div>
+        </div>
+        <div class="header2-nav">
+            <ol class="header2-nav-ol">
+                <li><a class="active" href="">Inicio</a></li>
+                <li><a href="tiendas.html">Tiendas</a></li>
+                <li><a href="reportesUser.html">Reportes</a></li>
+                <li><a href="mapaUser.html">Mapa</a></li>
+            </ol>
+        </div>
+        <div class="header2-othernav">
+          <ol class="header2-on-nav-ol">
+            <li><a class="seguridad-button">Seguridad</a></li>
+            <li><a class="productos-button">Productos</a></li>
+            <li><a class="regreso-button" href="index.html">Cerrar sesión</a></li>
+          </ol>
+        </div>
+    </header>
+    <section class="resumen">
+      <div class="resumen-container">
+        <h1 class="resumen-title">Resumen</h1> 
+        <div class="resumen-child">
+          <p class="resumen-text">Establecimientosafiliados</p>
+          <span class="resumen-number1">Num_1</span>
+        </div>
+        <div class="resumen-child">
+          <p class="resumen-text">Créditos Total</p>
+          <span class="resumen-number1">Num_1</span>
+          <span class="resumen-number2">Num_2</span>
+        </div>
+        <div class="resumen-child">
+          <p class="resumen-text">Deuda Total</p>
+          <span class="resumen-number1">Num_1</span>
+          <span class="resumen-number2">Num_2</span>
+        </div>
+      </div>
+      <div class="cobros-container user">
+        <h1 class="cobros-title">Pagos pendientes</h1> 
+        <div class="cobros-child">
+          <p class="cobros-text">Tiendas</p>
+          <span class="cobros-number1">Num_1</span>
+          <span class="cobros-number2">Num_2</span>
+        </div>
+        <div class="cobros-child">
+          <p class="cobros-text">Deudas más altas</p>
+          <span class="cobros-number1">Num_1</span>
+          <span class="cobros-number1">Num_2</span>
+        </div>
+      </div>
+      <div class="resumen-buttons">
+          <button class="pagarDeudas-button">Pagar mis deudas</button>
+          <button class="hacerCompra-button">Hacer una compra</button>
+      </div>
+    </section>
+    <section class="seguridad">
+      <div class="seguridad-back">
+        <i class="icon-circle-left" margin-top="1px"></i>
+        <p class="seguridad-back-text">Back</p>
+      </div>
+      <div class="seguridad-container">
+        <h1 class="seguridad-title">Cambia tu usuario y contraseña</h1>
+        <input class="first-input" type="email" placeholder="Correo electrónico actual*" name="email" required>
+        <input type="password" placeholder="Contraseña actual*" name="psw" required>
+        <div class="seguridad-line"></div>
+        <input class="intermed-input" type="email" placeholder="Nuevo correo electrónico (usuario) *" name="newEmail" required>
+        <input type="password" placeholder="Nueva contraseña *" name="phone" required>
+        <input type="password" placeholder="Repita la nueva contraseña *" name="direc" required>
+        <button type="submit" class="btn btn-light register-button">Actualizar</button>  
+      </div>
+    </section>
+    <section class="productos">
+      <div class="productos-back">
+        <i class="icon-circle-left" margin-top="1px"></i>
+        <p class="productos-back-text">Back</p>
+      </div>
+      <div class="productos-container">
+        <h1 class="productos-title">Lista de productos que vendes</h1>
+        <div class="productos-table">
+          <div class="productos-headers">
+            <p class="actual-item">Categoría</p>
+            <p class="actual-item">Producto</p>
+            <p class="actual-item">Precio S./</p>
+            <p class="actual-item">Precio $</p>
+          </div>
+          <div class="productos-tbody">
+            <div class="tbody-actual">
+              <p class="actual-item">Cat_name</p>
+              <p class="actual-item">Descripción</p>
+              <p class="actual-item">S./ ##.##</p>
+              <p class="actual-item">$ ##.##</p>
+            </div>
+          </div>
+        </div>
+        <div class="productos-footer">
+          <button class="agregarProducto-button">Agregar Producto</button>
+        </div>  
+      </div>
+    </section>
+    <section class="agregarProducto">
+      <div class="agregarProducto-back">
+        <i class="icon-circle-left" margin-top="1px"></i>
+        <p class="agregarProducto-back-text">Back</p>
+      </div>
+      <div class="agregarProducto-container">
+        <input type="text" placeholder="Nombre" name="name" required>
+        <input type="text" placeholder="Descripción" name="descrip" required>
+        <input type="text" placeholder="Precio en S./" name="precioS" required>
+        <input type="text" placeholder="Precio en $ *" name="precioDo" required>
+        <button type="submit" class="btn btn-light agregarProducto-button-salir">Agregar Producto</button>  
+      </div>
+    </section>
+    <section class="pagarDeuda">
+        <div class="pagarDeuda-container">
+            <h1 class="pagarDeuda-title">Clientes Actuales</h1>
+            <input class="pagarDeuda-input" type="text" placeholder="Buscar...">
+          </div>
+          <div class="pagarDeuda-table">
+            <div class="pagarDeuda-headers">
+              <p class="actual-item">Nombre</p>
+              <p class="actual-item">Moneda</p>
+              <p class="actual-item">Crédito</p>
+              <p class="actual-item">Tasa</p>
+            </div>
+            <div class="pagarDeuda-tbody" href="">
+              <div class="tbody-actual">
+                <p class="actual-item">Nombre</p>
+                <p class="actual-item">Moneda</p>
+                <p class="actual-item">Num_1</p>
+                <p class="actual-item">Tasa (%)</p>
+              </div>
+            </div>
+          </div>
+          <div class="pagarDeuda-footer">
+              <p class="actual-total">Total:</p>
+              <p class="actual-text">#</p>
+              <p class="actual-textRelleno">Clientes </p>
+              <p class="actual-total">Créditos:</p>
+              <p class="actual-total">Num_1</p>
+              <p class="actual-total">Num_2</p>
+              <p class="actual-total">Deudas:</p>
+              <p class="actual-total">Num_1</p>
+              <p class="actual-total">Num_2</p>
+          </div>
+    </section>
+    <section class="actualiza">
+      <div class="actualiza-back">
+        <i class="icon-circle-left" margin-top="1px"></i>
+        <p class="actualiza-back-text">Back</p>
+      </div>
+      <div class="actualiza-container">
+        <h1 class="actualiza-title">Actualiza tus datos</h1>
+        <input class="first-input" type="text" placeholder="Correo electrónico actual*" name="email" required>
+        <input type="pwd" placeholder="Contraseña actual*" name="psw" required>
+        <div class="actualiza-line"></div>
+        <input type="name" placeholder="Nombre del establecimiento *" name="name" required>
+        <input type="phone" placeholder="Número del teléfono celular *" name="phone" required>
+        <input class="final-input" type="direc" placeholder="Dirección *" name="direc" required>
+        <button type="submit" class="btn btn-light register-button">Actualizar</button>  
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="script/user.js"></script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+.monto{
+    position: absolute;
+    top: 40vh;
+    width: 100%;
+    left: -3000px;
+    top: 27.5vh;
+    border-top: 4px solid white;
+    &.not-active{
+        .not-visible;
+    }
+    &.is-active{
+        .visible;
+    }
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    .monto-back{
+        width: 90px;
+        .back-design-popUp();
+    }
+    .monto-container{
+        align-self: center;
+        justify-self: center;
+        background-color: white;
+        margin-top: 5vh;
+        width: 40vw;
+        height: 22.5vh;
+        border-radius: 30px;
+        .monto-title{
+            height: 7vh;
+            .titlewborder-design;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            .all-center;
+        }
+        .monto-containerText{
+            display: flex;
+            margin: 25px 50px 0 50px;
+            justify-content: space-between;
+            .monto-text{
+                margin: 0;
+            }
+            .monto-value{
+                margin: 0;
+            }
+        }
+        .monto-buttons{
+            height: 8vh;
+            width: 40vw;
+            .all-center;
+            justify-content: space-around;
+            .monto-buttons-text{
+                margin: 0;
+            }
+            .monto-button{
+                width: 10vw;
+                height: 5vh;
+                border: 0;
+                border-radius: 15px;
+                .button-hover-design;
+            }
+        }
+    }
+}

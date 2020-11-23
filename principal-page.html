@@ -33,7 +33,11 @@
             </ol>
         </div>
         <div class="header2-othernav">
-
+          <ol class="header2-on-nav-ol">
+            <li><a class="seguridad-button">Seguridad</a></li>
+            <li><a class="productos-button">Productos</a></li>
+            <li><a class="regreso-button" href="index.html">Cerrar sesión</a></li>
+          </ol>
         </div>
     </header>
     <section class="resumen">
@@ -66,6 +70,63 @@
           <p class="cobros-text">Total de clientes que deben</p>
           <span class="cobros-number1">Num_1</span>
         </div>
+      </div>
+    </section>
+    <section class="seguridad">
+      <div class="seguridad-back">
+        <i class="icon-circle-left" margin-top="1px"></i>
+        <p class="seguridad-back-text">Back</p>
+      </div>
+      <div class="seguridad-container">
+        <h1 class="seguridad-title">Cambia tu usuario y contraseña</h1>
+        <input class="first-input" type="email" placeholder="Correo electrónico actual*" name="email" required>
+        <input type="password" placeholder="Contraseña actual*" name="psw" required>
+        <div class="seguridad-line"></div>
+        <input class="intermed-input" type="email" placeholder="Nuevo correo electrónico (usuario) *" name="newEmail" required>
+        <input type="password" placeholder="Nueva contraseña *" name="phone" required>
+        <input type="password" placeholder="Repita la nueva contraseña *" name="direc" required>
+        <button type="submit" class="btn btn-light register-button">Actualizar</button>  
+      </div>
+    </section>
+    <section class="productos">
+      <div class="productos-back">
+        <i class="icon-circle-left" margin-top="1px"></i>
+        <p class="productos-back-text">Back</p>
+      </div>
+      <div class="productos-container">
+        <h1 class="productos-title">Lista de productos que vendes</h1>
+        <div class="productos-table">
+          <div class="productos-headers">
+            <p class="actual-item">Categoría</p>
+            <p class="actual-item">Producto</p>
+            <p class="actual-item">Precio S./</p>
+            <p class="actual-item">Precio $</p>
+          </div>
+          <div class="productos-tbody">
+            <div class="tbody-actual">
+              <p class="actual-item">Cat_name</p>
+              <p class="actual-item">Descripción</p>
+              <p class="actual-item">S./ ##.##</p>
+              <p class="actual-item">$ ##.##</p>
+            </div>
+          </div>
+        </div>
+        <div class="productos-footer">
+          <button class="agregarProducto-button">Agregar Producto</button>
+        </div>  
+      </div>
+    </section>
+    <section class="agregarProducto">
+      <div class="agregarProducto-back">
+        <i class="icon-circle-left" margin-top="1px"></i>
+        <p class="agregarProducto-back-text">Back</p>
+      </div>
+      <div class="agregarProducto-container">
+        <input type="text" placeholder="Nombre" name="name" required>
+        <input type="text" placeholder="Descripción" name="descrip" required>
+        <input type="text" placeholder="Precio en S./" name="precioS" required>
+        <input type="text" placeholder="Precio en $ *" name="precioDo" required>
+        <button type="submit" class="btn btn-light agregarProducto-button-salir">Agregar Producto</button>  
       </div>
     </section>
     <section class="actualiza">

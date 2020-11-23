@@ -1,0 +1,73 @@
+.cobrar{
+    position: absolute;
+    top: 40vh;
+    width: 100%;
+    left: -3000px;
+    top: 27.5vh;
+    border-top: 4px solid white;
+    &.not-active{
+        .not-visible;
+    }
+    &.is-active{
+        .visible;
+    }
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    .cobrar-back{
+        width: 90px;
+        .back-design-popUp();
+    }
+    .cobrar-container{
+        align-self: center;
+        justify-self: center;
+        background-color: white;
+        margin-top: 5vh;
+        width: 40vw;
+        height: 40vh;
+        border-radius: 30px;
+        .cobrar-title{
+            height: 7vh;
+            .titlewborder-design;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            .all-center;
+        }
+        .cobrar-containerText{
+            display: flex;
+            margin: 25px 50px 0 50px;
+            justify-content: space-between;
+            .cobrar-text{
+                margin: 0;
+            }
+            .cobrar-value{
+                margin: 0;
+            }
+        }
+        .cobrar-line{
+            background-color: black;
+            width: 30vw;
+            margin: 20px 0;
+            margin-left: 5vw;
+            height: 3px;
+        }
+        .cobrar-buttons{
+            height: 8vh;
+            width: 40vw;
+            .all-center;
+            justify-content: space-around;
+            .cobrar-buttons-text{
+                margin: 0;
+            }
+            .cobrar-button{
+                width: 10vw;
+                height: 5vh;
+                border: 0;
+                border-radius: 15px;
+                .button-hover-design;
+            }
+        }
+    }
+}

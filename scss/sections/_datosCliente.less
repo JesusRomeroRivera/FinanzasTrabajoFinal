@@ -1,0 +1,181 @@
+.datosCliente{
+    position: absolute;
+    width: 100%;
+    left: -3000px;
+    .background-design();
+    top: 27.5vh;
+    height: 72.5vh;
+    overflow-y: hidden;
+    border-top: 4px solid white;
+    box-sizing: border-box;
+    transition: 0.5s;
+    &.not-active{
+        .not-visible;
+    }
+    &.is-active{
+        .visible;
+    }
+    &.blur{
+        .efecto-blur;
+    }
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    .datosCliente-back{
+        width: 90px;
+        .back-design-popUp();
+    }
+    .datosCliente-container{
+        height: 62.5vh;
+        width: 91.5vw;
+        align-self: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 15vh 1fr;
+        .creditoCliente{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            width: 100%;
+            height: 100%;
+            .credito-title{
+                height: 7vh;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+                .titlewborder-design;
+                .credito-title-text{
+                    margin: 0;
+                }
+                .credito-title-number{
+                    
+                }
+                .credito-title-name{
+                    color: white;
+                    margin: 0;
+                    font-weight: 700;
+                    font-size: 28px;
+                }
+                .credito-title-ancle{
+                    margin: 0;
+                    .ancle-design;
+                    cursor: pointer;
+                }
+            }
+            .contenido{
+                background-color: rgba(210, 210, 210, 0.5);
+                display: flex;
+                justify-content: space-between;
+                padding: 0 50px;
+                align-items: center;
+                height: 8vh;
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+                .contenido-text-container{
+                    .contenido-text{
+                        margin: 0;
+                    }
+                }
+                .contenido-barra{
+                    width: 40vw;
+                    display: flex;
+                    flex-direction: column;
+                    .contenido-barra-text{
+                        display: flex;
+                        justify-content: space-between;
+                        .contenido-barra-text-container{
+                            display: flex;
+                            .contenido-barraConsumido{
+                                margin: 0;
+                            }
+                            .contenido-barraText{
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                    .contenido-barraProgress{
+                        progress{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .datosEnSi{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            .datos-title{
+                .titlewborder-design;
+                margin: 0;
+                width: 100%;
+                height: 6vh;
+                text-align: center;
+                font-weight: 700;
+                color: white;
+                font-size: 24px;
+                .all-center;
+            }
+            .datos-container{
+                background-color: rgba(200, 200, 200, 0.2);
+                padding: 50px;
+                border-right: 1px solid white;
+                height: 41.5vh;
+                display: flex;
+                flex-direction: column;
+                .datos-containerText{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 17px;
+                    margin-top: 12.5px;
+                    .datos-text{
+                        margin: 0;
+                    }
+                    .datos-value{
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+        .movimientosCliente{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            .movimientos-title{
+                .titlewborder-design;
+                width: 100%;
+                height: 6vh;
+                text-align: center;
+                font-weight: 700;
+                color: white;
+                font-size: 24px;
+                margin: 0;
+                .all-center;
+            }
+            .movimientos-container{
+                background-color: rgba(240, 240, 240, 0.7);
+                border-left: 1px solid white;
+                overflow-y: scroll;
+                height: 41.5vh;
+                display: flex;
+                flex-direction: column;
+                .movimientos-actual{
+                    display: grid;
+                    height: 5vh;
+                    grid-template-columns: 1fr 2fr 1fr;
+                    align-items: center;
+                    .movimientos-item{
+                        text-align: center;
+                        align-self: center;
+                        justify-self: center;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
