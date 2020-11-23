@@ -1,5 +1,6 @@
 package com.bnpt.service;
 
+<<<<<<< HEAD
 import java.util.Date;
 import java.util.List;
 
@@ -10,4 +11,10 @@ public interface CreditoService extends CrudService<Credito, Integer>{
     public List<Credito> listarActivosPorClienteId(String id);
     public List<Credito> creditosPorFechaVencimiento(Date fecha);
     public List<Credito> CreditosPorVencerHoy(Integer id_tienda);
+=======
+import com.bnpt.model.entities.Credito;
+
+public interface CreditoService extends CrudService<Credito, Integer>{
+
+>>>>>>> master
 }

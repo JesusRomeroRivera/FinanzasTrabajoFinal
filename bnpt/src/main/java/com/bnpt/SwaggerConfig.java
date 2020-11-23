@@ -12,7 +12,11 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+<<<<<<< HEAD
 //http://localhost:8080/swagger-ui/index.html#/
+=======
+//http://localhost:8080/swagger-ui.html
+>>>>>>> master
 
 @Configuration
 @EnableSwagger2

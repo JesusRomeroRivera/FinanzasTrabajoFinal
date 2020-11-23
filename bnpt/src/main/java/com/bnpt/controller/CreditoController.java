@@ -1,15 +1,20 @@
 package com.bnpt.controller;
 
 import java.net.URI;
+<<<<<<< HEAD
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+=======
+import java.util.ArrayList;
+>>>>>>> master
 import java.util.List;
 import java.util.Optional;
 
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+<<<<<<< HEAD
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
@@ -18,6 +23,12 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
+=======
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+>>>>>>> master
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -56,6 +67,7 @@ public class CreditoController {
 		
 		return new ResponseEntity<Credito>(Credito.get(), HttpStatus.OK);
 	}
+<<<<<<< HEAD
 
 	@ApiOperation("Retorna la créditos asociados al cliente correspondiente al id dado")
 	@GetMapping(value = "/Cliente/{id}")
@@ -89,6 +101,9 @@ public class CreditoController {
 		return new ResponseEntity<List<Credito>>(Creditos, HttpStatus.OK);
 	}
 
+=======
+	
+>>>>>>> master
 	@ApiOperation("Registra una Credito")
 	@PostMapping
 	public ResponseEntity<Credito> registrar(@Valid @RequestBody Credito Credito){

@@ -1,6 +1,10 @@
 package com.bnpt.model.entities;
 
+<<<<<<< HEAD
 import java.util.Date;
+=======
+import java.time.LocalDateTime;
+>>>>>>> master
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -14,18 +18,30 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+<<<<<<< HEAD
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.DecimalMin;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+=======
+
+import javax.validation.constraints.DecimalMin;
+
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+>>>>>>> master
 
 @Entity
 @Table(name = "creditos")
 public class Credito {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+<<<<<<< HEAD
     private Integer id;
+=======
+    Long id;
+>>>>>>> master
  
     @ManyToOne
     @JoinColumn(name = "tienda_id")
@@ -35,12 +51,18 @@ public class Credito {
     @JoinColumn(name = "cliente_id")
     Cliente cliente;
 
+<<<<<<< HEAD
 	@Column(name = "tipo_tasa_interes", nullable = false, length = 3)
     private String tipoTasaInteres;
 	
 	@DecimalMin("0.00")
     @Column(name = "valor_tasa_interes", nullable = false)
     private float valorTasaInteres;
+=======
+	@ManyToOne
+	@JoinColumn(name = "tasa_interes_id", nullable = false)
+	private TasaInteres tasaInteres;
+>>>>>>> master
 
     @DecimalMin("0.00")
     @Column(name = "credito_inicial", nullable = false)
@@ -50,6 +72,7 @@ public class Credito {
     @Column(name = "credito_restante", nullable = false)
     private float creditoRestante;
 
+<<<<<<< HEAD
     @DecimalMin("0.00")
     @Column(name = "total_pagar", nullable = false)
     private float totalPagar;
@@ -67,10 +90,19 @@ public class Credito {
     private Date fechaVencimiento;
     
     @JsonManagedReference
+=======
+	@JsonSerialize(using = ToStringSerializer.class)
+    private LocalDateTime fechaEmision;
+    
+	@JsonSerialize(using = ToStringSerializer.class)
+    private LocalDateTime fechaVencimiento;
+    
+>>>>>>> master
 	@OneToMany(mappedBy = "credito", cascade = { CascadeType.PERSIST, CascadeType.MERGE,
         CascadeType.REMOVE }, fetch = FetchType.LAZY)
     private List<Compra> compras;
 
+<<<<<<< HEAD
 	//1 -> Activo
 	//0 -> No activo
     @Column(name = "status", nullable = false, length = 3)
@@ -81,6 +113,13 @@ public class Credito {
     }
 
     public void setId(Integer id) {
+=======
+    public Long getId() {
+        return this.id;
+    }
+
+    public void setId(Long id) {
+>>>>>>> master
         this.id = id;
     }
 
@@ -100,6 +139,7 @@ public class Credito {
         this.cliente = cliente;
     }
 
+<<<<<<< HEAD
     public String getTipoTasaInteres() {
         return this.tipoTasaInteres;
     }
@@ -114,6 +154,14 @@ public class Credito {
 
     public void setValorTasaInteres(float valorTasaInteres) {
         this.valorTasaInteres = valorTasaInteres;
+=======
+    public TasaInteres getTasaInteres() {
+        return this.tasaInteres;
+    }
+
+    public void setTasaInteres(TasaInteres tasaInteres) {
+        this.tasaInteres = tasaInteres;
+>>>>>>> master
     }
 
     public float getCreditoInicial() {
@@ -132,6 +180,7 @@ public class Credito {
         this.creditoRestante = creditoRestante;
     }
 
+<<<<<<< HEAD
     public float getTotalPagar() {
         return this.totalPagar;
     }
@@ -161,6 +210,21 @@ public class Credito {
     }
 
     public void setFechaVencimiento(Date fechaVencimiento) {
+=======
+    public LocalDateTime getFechaEmision() {
+        return this.fechaEmision;
+    }
+
+    public void setFechaEmision(LocalDateTime fechaEmision) {
+        this.fechaEmision = fechaEmision;
+    }
+
+    public LocalDateTime getFechaVencimiento() {
+        return this.fechaVencimiento;
+    }
+
+    public void setFechaVencimiento(LocalDateTime fechaVencimiento) {
+>>>>>>> master
         this.fechaVencimiento = fechaVencimiento;
     }
 
@@ -171,6 +235,7 @@ public class Credito {
     public void setCompras(List<Compra> compras) {
         this.compras = compras;
     }
+<<<<<<< HEAD
 
     public Boolean isStatus() {
         return this.status;
@@ -183,4 +248,6 @@ public class Credito {
     public void setStatus(Boolean status) {
         this.status = status;
     }
+=======
+>>>>>>> master
 }

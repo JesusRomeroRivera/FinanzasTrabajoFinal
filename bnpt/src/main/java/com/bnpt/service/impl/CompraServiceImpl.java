@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+<<<<<<< HEAD
 import org.springframework.transaction.annotation.Transactional;
 
 import com.bnpt.exception.GenericException;
@@ -12,6 +13,11 @@ import com.bnpt.model.entities.Compra;
 import com.bnpt.model.entities.Credito;
 import com.bnpt.model.repository.CompraRepository;
 import com.bnpt.model.repository.CreditoRepository;
+=======
+
+import com.bnpt.model.entities.Compra;
+import com.bnpt.model.repository.CompraRepository;
+>>>>>>> master
 import com.bnpt.service.CompraService;
 
 @Service
@@ -19,6 +25,7 @@ public class CompraServiceImpl implements CompraService{
 
 	@Autowired
 	private CompraRepository CompraRepository;
+<<<<<<< HEAD
 	@Autowired
 	private CreditoRepository CreditoRepository;
 	
@@ -39,10 +46,16 @@ public class CompraServiceImpl implements CompraService{
 
 	@Override
 	public Compra modificar(Compra t) {
+=======
+	
+	@Override
+	public Compra registrar(Compra t) {
+>>>>>>> master
 		return CompraRepository.save(t);
 	}
 
 	@Override
+<<<<<<< HEAD
 	public Compra rechazarCompra(Integer id) {
 		Compra compra = listId(id).get();
 
@@ -55,6 +68,10 @@ public class CompraServiceImpl implements CompraService{
 		compra.setStatusCompra(false);
 
 		return CompraRepository.save(compra);
+=======
+	public Compra modificar(Compra t) {		
+		return CompraRepository.save(t);
+>>>>>>> master
 	}
 
 	@Override

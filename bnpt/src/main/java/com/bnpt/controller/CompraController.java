@@ -20,7 +20,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+<<<<<<< HEAD
 import com.bnpt.exception.GenericException;
+=======
+>>>>>>> master
 import com.bnpt.exception.ModeloNotFoundException;
 import com.bnpt.model.entities.Compra;
 import com.bnpt.service.CompraService;
@@ -56,6 +59,7 @@ public class CompraController {
 	@PostMapping
 	public ResponseEntity<Compra> registrar(@Valid @RequestBody Compra Compra){
 		Compra CompraNew = new Compra();
+<<<<<<< HEAD
 
 		try{
 			CompraNew = CompraService.registrar(Compra);
@@ -64,6 +68,9 @@ public class CompraController {
 			throw new ModeloNotFoundException(e.getMessage());
 		}
 
+=======
+		CompraNew = CompraService.registrar(Compra);
+>>>>>>> master
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(CompraNew.getId()).toUri();
 		return ResponseEntity.created(location).build();		
 	}
@@ -74,6 +81,7 @@ public class CompraController {
 		CompraService.modificar(Compra);
 		return new ResponseEntity<Compra>(HttpStatus.OK);
 	}
+<<<<<<< HEAD
 
 	@ApiOperation("Rechaza una compra")
 	@PutMapping(value = "/{id}")
@@ -87,6 +95,8 @@ public class CompraController {
 
 		return new ResponseEntity<Compra>(HttpStatus.OK);		
 	}
+=======
+>>>>>>> master
 	
 	@ApiOperation("Elimina la Compra correspondiente al id dado")
 	@DeleteMapping(value = "/{id}")

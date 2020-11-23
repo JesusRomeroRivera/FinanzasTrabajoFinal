@@ -1,6 +1,9 @@
 package com.bnpt.service.impl;
 
+<<<<<<< HEAD
 import java.util.Date;
+=======
+>>>>>>> master
 import java.util.List;
 import java.util.Optional;
 
@@ -41,6 +44,7 @@ public class CreditoServiceImpl implements CreditoService{
 	public List<Credito> listar() {
 		return CreditoRepository.findAll();
 	}
+<<<<<<< HEAD
 
 	@Override
 	public List<Credito> listarPorClienteId(String id) {
@@ -62,4 +66,6 @@ public class CreditoServiceImpl implements CreditoService{
 	{
 		return CreditoRepository.getCreditosPorCobrarHoy(id_tienda);
 	}
+=======
+>>>>>>> master
 }

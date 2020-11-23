@@ -2,6 +2,11 @@ package com.bnpt.model.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+<<<<<<< HEAD
+=======
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+>>>>>>> master
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -96,5 +101,8 @@ public class Cliente {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 }

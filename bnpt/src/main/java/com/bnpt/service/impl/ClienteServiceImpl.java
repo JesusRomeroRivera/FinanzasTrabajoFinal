@@ -15,7 +15,11 @@ public class ClienteServiceImpl implements ClienteService{
 
 	@Autowired
 	private ClienteRepository ClienteRepository;
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> master
 	@Override
 	public Cliente registrar(Cliente t) {
 		return ClienteRepository.save(t);
