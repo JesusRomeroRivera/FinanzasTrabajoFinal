@@ -1,5 +1,6 @@
 package com.bnpt.service.impl;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -49,5 +50,16 @@ public class CreditoServiceImpl implements CreditoService{
 	@Override
 	public List<Credito> listarActivosPorClienteId(String id) {
 		return CreditoRepository.getCreditosActivosCliente(id);
+	}
+
+	@Override
+	public List<Credito> creditosPorFechaVencimiento(LocalDateTime fecha) {
+		return CreditoRepository.getCreditosPorFechaCliente(fecha);
+	}
+
+    @Override
+	public List<Credito> CreditosPorVencerHoy(Integer id_tienda) 
+	{
+		return CreditoRepository.getCreditosPorCobrarHoy(id_tienda);
 	}
 }

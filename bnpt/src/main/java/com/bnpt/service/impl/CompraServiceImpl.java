@@ -25,26 +25,36 @@ public class CompraServiceImpl implements CompraService{
 	@Override
 	@Transactional
 	public Compra registrar(Compra t) {
-		if(t.getCredito().getCreditoRestante() - t.getPrecio() >= 0){
-			Credito tempCredito = t.getCredito();
-			tempCredito.setCreditoRestante(t.getCredito().getCreditoRestante() - t.getPrecio());
-			CreditoRepository.save(tempCredito);
+		Credito tempCredito = CreditoRepository.findById(t.getCredito().getId()).get();
+		System.out.println(t.getCredito().getCreditoRestante());
+		if(tempCredito.getCreditoRestante() - t.getPrecio() >= 0){
+			tempCredito.setCreditoRestante(tempCredito.getCreditoRestante() - t.getPrecio());
 
 			return CompraRepository.save(t);
 		}
 		else{
-			throw new GenericException("CreditoRestanteInsuficiente");
+			throw new GenericException("Credito restante insuficiente");
 		}
 	}
 
-	//t ya viene con el status cambiado
 	@Override
 	public Compra modificar(Compra t) {
-		Credito tempCredito = t.getCredito();
-		tempCredito.setCreditoRestante(tempCredito.getCreditoRestante() + t.getPrecio());
-		CreditoRepository.save(tempCredito);
-
 		return CompraRepository.save(t);
+	}
+
+	@Override
+	public Compra rechazarCompra(Integer id) {
+		Compra compra = listId(id).get();
+
+		if(compra.isStatusCompra() == false){
+			throw new GenericException("Compra ya rechazada");
+		}
+
+		Credito tempCredito = CreditoRepository.findById(compra.getCredito().getId()).get();
+		tempCredito.setCreditoRestante(tempCredito.getCreditoRestante() + compra.getPrecio());
+		compra.setStatusCompra(false);
+
+		return CompraRepository.save(compra);
 	}
 
 	@Override

@@ -8,13 +8,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.ManyToOne;
 import javax.persistence.JoinColumn;
 import javax.validation.constraints.DecimalMin;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 @Table(name = "compras")
@@ -23,7 +23,7 @@ public class Compra {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-	@JsonIgnore
+	@JsonBackReference
 	@ManyToOne
 	@JoinColumn(name = "credito_id", nullable = false)
 	private Credito credito;
@@ -35,7 +35,8 @@ public class Compra {
     @Column(name = "precio", nullable = false)
     private float precio;
     
-	@JsonSerialize(using = ToStringSerializer.class)
+	@Column(name="fecha_pago",nullable=false)
+	//@Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime fechaPago;
 
     @Column(name = "tipo_moneda", nullable = false, length = 3)

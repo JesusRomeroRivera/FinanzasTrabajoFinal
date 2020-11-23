@@ -61,10 +61,7 @@ public class CompraController {
 			CompraNew = CompraService.registrar(Compra);
 		}
 		catch(GenericException e){
-			switch(e.getMessage()){
-				case "CreditoRestanteInsuficiente":
-				throw new ModeloNotFoundException("Crédito restante insuficiente");
-			}
+			throw new ModeloNotFoundException(e.getMessage());
 		}
 
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(CompraNew.getId()).toUri();
@@ -76,6 +73,19 @@ public class CompraController {
 	public ResponseEntity<Compra> actualizar(@Valid @RequestBody Compra Compra) {		
 		CompraService.modificar(Compra);
 		return new ResponseEntity<Compra>(HttpStatus.OK);
+	}
+
+	@ApiOperation("Rechaza una compra")
+	@PutMapping(value = "/{id}")
+	public ResponseEntity<Compra> rechazarCompra(@PathVariable Integer id){
+		try{
+			CompraService.rechazarCompra(id);
+		}
+		catch(GenericException e){
+			throw new ModeloNotFoundException(e.getMessage());
+		}
+
+		return new ResponseEntity<Compra>(HttpStatus.OK);		
 	}
 	
 	@ApiOperation("Elimina la Compra correspondiente al id dado")

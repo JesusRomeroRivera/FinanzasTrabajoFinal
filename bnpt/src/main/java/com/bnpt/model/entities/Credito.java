@@ -14,18 +14,18 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.DecimalMin;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name = "creditos")
 public class Credito {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Integer id;
  
     @ManyToOne
     @JoinColumn(name = "tienda_id")
@@ -50,21 +50,24 @@ public class Credito {
     @Column(name = "credito_restante", nullable = false)
     private float creditoRestante;
 
-	@JsonSerialize(using = ToStringSerializer.class)
+	@Column(name="fecha_emision",nullable=false)
+	//@Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime fechaEmision;
     
-	@JsonSerialize(using = ToStringSerializer.class)
+	@Column(name="fecha_vencimiento",nullable=false)
+	//@Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime fechaVencimiento;
     
+    @JsonManagedReference
 	@OneToMany(mappedBy = "credito", cascade = { CascadeType.PERSIST, CascadeType.MERGE,
         CascadeType.REMOVE }, fetch = FetchType.LAZY)
     private List<Compra> compras;
 
-    public Long getId() {
+    public Integer getId() {
         return this.id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

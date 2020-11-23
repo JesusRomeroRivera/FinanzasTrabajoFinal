@@ -1,6 +1,7 @@
 package com.bnpt.controller;
 
 import java.net.URI;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -67,6 +68,22 @@ public class CreditoController {
 		return new ResponseEntity<List<Credito>>(Creditos, HttpStatus.OK);
 	}
 	
+	@ApiOperation("Retorna los creditos asociados en base a la fecha de vencimiento indicada")
+	@GetMapping(value = "/Credito/{fecha_vencimiento}")
+	public ResponseEntity<List<Credito>> creditosPorFechaVencimiento(@PathVariable("fecha_vencimiento") LocalDateTime fecha) {
+		List<Credito> Creditos = CreditoService.creditosPorFechaVencimiento(fecha);
+		
+		return new ResponseEntity<List<Credito>>(Creditos, HttpStatus.OK);
+	}
+
+	@ApiOperation("Retorna los creditos a vencer a la fecha de hoy")
+	@GetMapping(value = "/Credito/{id_tienda}/hoy")
+	public ResponseEntity<List<Credito>> CreditosAVencerHoy(@PathVariable("id_tienda") Integer id_tienda) {
+		List<Credito> Creditos = CreditoService.CreditosPorVencerHoy(id_tienda);
+		
+		return new ResponseEntity<List<Credito>>(Creditos, HttpStatus.OK);
+	}
+
 	@ApiOperation("Registra una Credito")
 	@PostMapping
 	public ResponseEntity<Credito> registrar(@Valid @RequestBody Credito Credito){
