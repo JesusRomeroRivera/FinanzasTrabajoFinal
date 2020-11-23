@@ -1,6 +1,6 @@
 package com.bnpt.model.entities;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -50,18 +50,31 @@ public class Credito {
     @Column(name = "credito_restante", nullable = false)
     private float creditoRestante;
 
+    @DecimalMin("0.00")
+    @Column(name = "total_pagar", nullable = false)
+    private float totalPagar;
+
+    @DecimalMin("0.00")
+    @Column(name = "mora", nullable = false)
+    private float mora;
+
 	@Column(name="fecha_emision",nullable=false)
-	//@Temporal(TemporalType.TIMESTAMP)
-    private LocalDateTime fechaEmision;
+	@Temporal(TemporalType.TIMESTAMP)
+    private Date fechaEmision;
     
 	@Column(name="fecha_vencimiento",nullable=false)
-	//@Temporal(TemporalType.TIMESTAMP)
-    private LocalDateTime fechaVencimiento;
+	@Temporal(TemporalType.TIMESTAMP)
+    private Date fechaVencimiento;
     
     @JsonManagedReference
 	@OneToMany(mappedBy = "credito", cascade = { CascadeType.PERSIST, CascadeType.MERGE,
         CascadeType.REMOVE }, fetch = FetchType.LAZY)
     private List<Compra> compras;
+
+	//1 -> Activo
+	//0 -> No activo
+    @Column(name = "status", nullable = false, length = 3)
+    private Boolean status;
 
     public Integer getId() {
         return this.id;
@@ -119,19 +132,35 @@ public class Credito {
         this.creditoRestante = creditoRestante;
     }
 
-    public LocalDateTime getFechaEmision() {
+    public float getTotalPagar() {
+        return this.totalPagar;
+    }
+
+    public void setTotalPagar(float totalPagar) {
+        this.totalPagar = totalPagar;
+    }
+
+    public float getMora() {
+        return this.mora;
+    }
+
+    public void setMora(float mora) {
+        this.mora = mora;
+    }
+
+    public Date getFechaEmision() {
         return this.fechaEmision;
     }
 
-    public void setFechaEmision(LocalDateTime fechaEmision) {
+    public void setFechaEmision(Date fechaEmision) {
         this.fechaEmision = fechaEmision;
     }
 
-    public LocalDateTime getFechaVencimiento() {
+    public Date getFechaVencimiento() {
         return this.fechaVencimiento;
     }
 
-    public void setFechaVencimiento(LocalDateTime fechaVencimiento) {
+    public void setFechaVencimiento(Date fechaVencimiento) {
         this.fechaVencimiento = fechaVencimiento;
     }
 
@@ -141,5 +170,17 @@ public class Credito {
 
     public void setCompras(List<Compra> compras) {
         this.compras = compras;
+    }
+
+    public Boolean isStatus() {
+        return this.status;
+    }
+
+    public Boolean getStatus() {
+        return this.status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
     }
 }

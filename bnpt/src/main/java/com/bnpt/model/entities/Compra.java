@@ -1,6 +1,6 @@
 package com.bnpt.model.entities;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -36,8 +36,8 @@ public class Compra {
     private float precio;
     
 	@Column(name="fecha_pago",nullable=false)
-	//@Temporal(TemporalType.TIMESTAMP)
-    private LocalDateTime fechaPago;
+	@Temporal(TemporalType.TIMESTAMP)
+    private Date fechaPago;
 
     @Column(name = "tipo_moneda", nullable = false, length = 3)
 	private String tipoMoneda;
@@ -79,11 +79,11 @@ public class Compra {
 		this.precio = precio;
 	}
 
-	public LocalDateTime getFechaPago() {
+	public Date getFechaPago() {
 		return this.fechaPago;
 	}
 
-	public void setFechaPago(LocalDateTime fechaPago) {
+	public void setFechaPago(Date fechaPago) {
 		this.fechaPago = fechaPago;
 	}
 

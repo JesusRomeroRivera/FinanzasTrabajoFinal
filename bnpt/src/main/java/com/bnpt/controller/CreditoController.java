@@ -1,18 +1,23 @@
 package com.bnpt.controller;
 
 import java.net.URI;
-import java.time.LocalDateTime;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -70,7 +75,7 @@ public class CreditoController {
 	
 	@ApiOperation("Retorna los creditos asociados en base a la fecha de vencimiento indicada")
 	@GetMapping(value = "/Credito/{fecha_vencimiento}")
-	public ResponseEntity<List<Credito>> creditosPorFechaVencimiento(@PathVariable("fecha_vencimiento") LocalDateTime fecha) {
+	public ResponseEntity<List<Credito>> creditosPorFechaVencimiento(@PathVariable("fecha_vencimiento") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date fecha) {
 		List<Credito> Creditos = CreditoService.creditosPorFechaVencimiento(fecha);
 		
 		return new ResponseEntity<List<Credito>>(Creditos, HttpStatus.OK);
