@@ -32,10 +32,10 @@
     <section class="establecimiento">
       <form class="form-container">
         <p class="establecimiento-text">Complete la siguiente información para registrarse correctamente:</p>
-        <input class="first-input" type="email" placeholder="Correo electrónico *" name="email" required>
-        <input type="password" placeholder="Contraseña *" name="password" required>
-        <input type="text" placeholder="Nombre del establecimiento *" name="name" required>
-        <input type="number" placeholder="Número del teléfono celular *" name="phone" required>
+        <input class="first-input" type="text" placeholder="Correo electrónico *" name="email" required>
+        <input type="pwd" placeholder="Contraseña *" name="psw" required>
+        <input type="name" placeholder="Nombre del establecimiento *" name="name" required>
+        <input type="phone" placeholder="Número del teléfono celular *" name="phone" required>
         <input class="final-input" type="direc" placeholder="Dirección *" name="direc" required>
         <button type="submit" class="btn btn-light register-button">Registrarte</button>
         <p class="establecimiento-text-2">Al hacer click en "Registrarte", aceptas nuestras Condiciones, la Política de datos
@@ -46,18 +46,18 @@
     <section class="clientes">
       <form class="form-container">
         <p class="clientes-text">Complete la siguiente información para registrarse correctamente:</p>
-        <input class="first-input" type="email" placeholder="Correo electrónico *" name="email" required>
-        <input class="s-input" type="password" placeholder="Contraseña *" name="psw" required>
-        <input class="t-input" type="name" placeholder="Nombres *" name="name" required>
-        <input class="f-input" type="surname" placeholder="Apellidos *" name="phone" required>
-        <select class=" fi-input" type="type" placeholder="Tipo *" name="phone" required>
-          <option value="volvo">Dni</option>
-          <option value="saab">Pasaporte</option>
+        <input id="correo_cliente" class="first-input" type="text" placeholder="Correo electrónico *" name="email" required>
+        <input id="contraseña_cliente" class="s-input" type="password" placeholder="Contraseña *" name="psw" required>
+        <input id="nombre_cliente" class="t-input" type="name" placeholder="Nombres *" name="name" required>
+        <input id="apellido_cliente" class="f-input" type="surname" placeholder="Apellidos *" name="phone" required>
+        <select id="tipo_documento" class=" fi-input" type="type" placeholder="Tipo *" name="phone" required>
+          <option value="DNI">DNI</option>
+          <option value="CEX">CEX</option>
         </select>
-        <input class="si-input" type="number" placeholder="Documento *" name="phone" required>
-        <input class="se-input" type="number" placeholder="Número del teléfono celular *" name="phone" required>
-        <input class="final-input" type="direc" placeholder="Dirección *" name="direc" required>
-        <button type="submit" class="btn btn-light register-button">Registrarte</button>
+        <input id="documento" class="si-input" type="doc" placeholder="Documento *" name="phone" required>
+        <input id="telefono" class="se-input" type="phone" placeholder="Número del teléfono celular *" name="phone" required>
+        <input id="direccion" class="final-input" type="direc" placeholder="Dirección *" name="direc" required>
+        <button type="submit" class="btn btn-light register-button boton-registro-clientes">Registrarte</button>
         <p class="clientes-text-2">Al hacer click en "Registrarte", aceptas nuestras Condiciones, la Política de datos
           y la Política de cookies. Para verlas, haz click <i class="principal-button2">aquí</i>.
         </p>
@@ -81,5 +81,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="script/script.js"></script>
+
+    <script src="script/model/cliente.js"></script>
+    <script src="script/model/error.js"></script>
+    <script src="script/http.js"></script>
+    <script src="script/shared/var.constant.js"></script>
+    <script src="script/service/cliente.service.js"></script>
   </body>
 </html>

@@ -58,6 +58,13 @@ public class ClienteController {
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(ClienteNew.getId()).toUri();
 		return ResponseEntity.created(location).build();		
 	}
+
+	@ApiOperation("Logea un cliente")
+	@PostMapping(value = "/login")
+	public ResponseEntity<Cliente> login(@Valid @RequestBody Cliente Cliente){
+		Optional<Cliente> cliente_returned = ClienteService.login(Cliente);
+		return new ResponseEntity<Cliente>(cliente_returned.get(), HttpStatus.OK);		
+	}
 	
 	@ApiOperation("Actualiza una Cliente")
 	@PutMapping

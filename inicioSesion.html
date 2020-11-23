@@ -24,9 +24,9 @@
         <p class="inicio-text">Ingresa tus datos para que puedas iniciar sesión</p>
         <div class="inicio-inputs">
           <label for="" class="inicio-user">Usuario:</label>
-          <input class="user-input" type="text" placeholder="Correo electrónico *" name="email" required>
+          <input id="correo_login" class="user-input" type="text" placeholder="Correo electrónico *" name="email" required>
           <label for="" class="inicio-psw">Contraseña:</label>
-          <input class="pwd-input" type="pwd" placeholder="Contraseña *" name="psw" required>        
+          <input id="contraseña_login" class="pwd-input" type="pwd" placeholder="Contraseña *" name="psw" required>        
         </div>
         <div class="inicio-ancles">
           <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -35,7 +35,7 @@
           </label>
           <i class="principal-button" href="">¿Has olvidado tu contraseña?</i>
         </div>
-        <a class="inicio-button" href=""><button type="button" class="btn btn-light">Ingresar</button></a>
+        <a class="inicio-button button-login"><button type="button" class="btn btn-light">Ingresar</button></a>
         <p class="inicio-register">¿Deseas registrarte? Haz click <a href="registro.html">aquí</a></p>
       </div>
     </section>
@@ -55,5 +55,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="script/script.js"></script>
+
+    <script src="script/model/cliente.js"></script>
+    <script src="script/http.js"></script>
+    <script src="script/error.js"></script>
+    <script src="script/shared/var.constant.js"></script>
+    <script src="script/service/cliente.service.js"></script>
   </body>
 </html>
