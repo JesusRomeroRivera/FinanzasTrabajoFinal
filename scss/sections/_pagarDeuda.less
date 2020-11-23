@@ -1,68 +1,82 @@
 .pagarDeuda{
-    height: 45vh;
+    position: absolute;
+    top: 20vh;
     width: 100%;
+    left: -3000px;
+    .background-design();
+    &.not-active{
+        .not-visible;
+    }
+    &.is-active{
+        .visible;
+    }
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
-    background-color: rgba(220, 220, 220, 0.3);
-    .nuevos-headers, .actual-headers{
-        width: 100%;
-        height: 5vh;
-        background-color: rgba(210, 210, 210, 0.5);
-        display: grid;
-        grid-template-columns: 30px repeat(4, 1fr);
-        .nuevos-item, .actual-item{
-            height: 100%;
-            .all-center;
+    .pagarDeuda-back{
+        width: 80px;
+        .back-design-popUp();
+    }
+    .pagarDeuda-container{
+        display: flex;
+        width: 91.5vw;
+        height: 7.5vh;
+        .titlewborder-design;
+        align-self: center;
+        justify-self: center;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 70px;
+        .pagarDeuda-title{
+            font-size: 32px;
+            color: white;
+            font-weight: 700;
             margin: 0;
         }
+        .pagarDeuda-input{
+            .input-design;
+            height: 45px;
+            width: 250px;
+            border-radius: 20px;
+        }
     }
-    .nuevos-tbody, .actual-tbody{
-        width: 100% + 3px;
-        height: 40vh;
-        display: block;
-        overflow-y: scroll;
-        cursor: pointer;
-        .tbody-cliente, .tbody-actual{
+    .pagarDeuda-table{
+        display: flex;
+        flex-direction: column;
+        width: 91.5vw;
+        height: 50vh;
+        align-self: center;
+        justify-self: center;
+        background-color: rgba(180, 180, 180, 0.3);
+        .pagarDeuda-headers{
+            background-color: rgba(210, 210, 210, 0.5);
             width: 100%;
-            height: 12vh;
+            height: 7.5vh;
             display: grid;
-            grid-template-columns: 30px repeat(4, 1fr);    
-            .nuevos-item, .actual-item{
-                height: 100%;
-                box-sizing: border-box;
+            grid-template-columns: repeat(6, 1fr);
+            .actual-item{
                 .all-center;
-                padding: 0;
                 margin: 0;
-                text-align: center;
-                &.nombre{
-                    padding: 0 10px;
-                }
-                &.credito{
-                    display: flex;
-                    padding: 5px 0;
-                    flex-direction: column;
-                    .input-credito{
-                        width: 100%;
-                    }
-                    .tipoCredito{
-                        margin-top: 5px;
-                        width: 60px;
-                        height: 40px;
-                        font-size: 14px;
-                    }
-                }
-                &.tipoTasa{
-                    height: 40px;
-                    width: 80px;
-                    padding-left: 5px;
+            }
+        }
+        .pagarDeuda-tbody{
+            width: 100%;
+            height: 42.5vh;
+            .tbody-actual{
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                .actual-item{
+                    height: 5vh;
+                    .all-center;
+                    margin: 0;
                     align-self: center;
                     justify-self: center;
                 }
-                &.tasa{
-                    .input-tasa{
-                        width: 75px;
-                    }
-                }
-            }  
+            }
         }
-    }    
+
+    }
+    .pagarDeuda-footer{
+        display: flex;
+    }
 }
