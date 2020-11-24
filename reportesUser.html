@@ -26,9 +26,9 @@
         </div>
         <div class="header2-nav">
             <ol class="header2-nav-ol">
-                <li><a class="active" href="">Inicio</a></li>
+                <li><a href="principalPageUser.html">Inicio</a></li>
                 <li><a href="tiendas.html">Tiendas</a></li>
-                <li><a href="reportesUser.html">Reportes</a></li>
+                <li><a class="active" href="reportesUser.html">Reportes</a></li>
                 <li><a href="mapaUser.html">Mapa</a></li>
             </ol>
         </div>
@@ -40,42 +40,49 @@
           </ol>
         </div>
     </header>
-    <section class="resumen">
-      <div class="resumen-container">
-        <h1 class="resumen-title">Resumen</h1> 
-        <div class="resumen-child">
-          <p class="resumen-text">Establecimientosafiliados</p>
-          <span class="resumen-number1">Num_1</span>
+    <section class="reportes">
+        <div class="reportes-header">
+          <div class="reportes-date">
+            <label for="desde" class="reportes-desde">Desde:</label>
+            <input type="date" name="desde" id="">
+            <label for="hasta" class="reportes-desde">Hasta:</label>
+            <input type="date" name="hasta" id="">
+          </div>
+          <div class="reportes-button">
+            <button class="repotes-generar btn-light">Generar</button>
+            <button class="repotes-imprimir btn-light">Imprimir</button>
+            <button class="repotes-limpiar btn-light">Limpiar</button>
+          </div>
         </div>
-        <div class="resumen-child">
-          <p class="resumen-text">Créditos Total</p>
-          <span class="resumen-number1">Num_1</span>
-          <span class="resumen-number2">Num_2</span>
+      </section>
+      <section class="table">
+        <div class="table-headers">
+          <p class="table-item">Nombre</p>
+          <p class="table-item">Documento de Identidad</p>
+          <p class="table-item">Número de Teléfono Celular</p>
+          <p class="table-item">Dirección</p>
+          <p class="table-item">Crédito</p>
+          <p class="table-item">Deuda</p>
         </div>
-        <div class="resumen-child">
-          <p class="resumen-text">Deuda Total</p>
-          <span class="resumen-number1">Num_1</span>
-          <span class="resumen-number2">Num_2</span>
-        </div>
+        <div class="table-tbody">
+          <div class="tbody-table">
+              <p class="table-item">Nombre</p>
+              <p class="table-item">DNI num_1</p>
+              <p class="table-item">### ### ###</p>
+              <p class="table-item">Dirección - ...</p>
+              <p class="table-item">S./($) ##.##</p>
+              <p class="table-item">S./($) ##.##</p>
+          </div>
       </div>
-      <div class="cobros-container user">
-        <h1 class="cobros-title">Pagos pendientes</h1> 
-        <div class="cobros-child">
-          <p class="cobros-text">Tiendas</p>
-          <span class="cobros-number1">Num_1</span>
-          <span class="cobros-number2">Num_2</span>
-        </div>
-        <div class="cobros-child">
-          <p class="cobros-text">Deudas más altas</p>
-          <span class="cobros-number1">Num_1</span>
-          <span class="cobros-number1">Num_2</span>
-        </div>
-      </div>
-      <div class="resumen-buttons">
-          <button class="pagarDeudas-button">Pagar mis deudas</button>
-          <button class="hacerCompra-button">Hacer una compra</button>
-      </div>
-    </section>
+      </section>
+      <section class="datos">
+        <p class="datos-total">Total:</p>
+        <p class="datos-text">#</p>
+        <p class="datos-textRelleno">Clientes </p>
+        <p class="datos-total">Créditos:</p>
+        <p class="datos-total">Num_1</p>
+        <p class="datos-total">Num_2</p>
+      </section>
     <section class="seguridad">
       <div class="seguridad-back">
         <i class="icon-circle-left" margin-top="1px"></i>
@@ -223,6 +230,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="script/user.js"></script>
-    <script type="module" src="script/pages/principalPageUser.js" ></script>
+    <script src="script/model/cliente.js"></script>
+    <script type="module" src="script/userActive.js"></script>
+    <script>
+      
+      alert(actualCliente);
+      document.getElementById("nombre_Cliente").innerHTML = "GAAA";
+    </script>
   </body>
 </html>

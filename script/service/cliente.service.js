@@ -1,3 +1,5 @@
+import { Cliente } from "./../model/cliente.js";
+
 class clienteService{
     constructor(){
         this.url = HOST + '/Clientes';
@@ -25,28 +27,20 @@ class clienteService{
         var response = httpPost(this.url + "/login", cliente.stringify());
 
         if(response.status != 200 && response.status != 201){
-            showError(response.responseText);
+            showError(response.responseText);   
             return null;
         }
 
         var cliente = new Cliente();
         cliente.loadFromJson(response.responseText);
 
+        if(response.status == 200){
+            var ref = document.getElementById("siIniciaSesion");
+            ref.href = "principalPageUser.html";
+        }
+
         return cliente;
     }
 }
 
-service = new clienteService();
-service.listar();
-
-const $btn = document.querySelector('.button-login');
-$btn.addEventListener('click', () => {
-    var correo = document.getElementById("correo_login").value;
-    var contraseña = document.getElementById("contraseña_login").value;
-
-    cliente = new Cliente();
-    cliente.correo = correo;
-    cliente.password = contraseña;
-    console.log(cliente);
-    console.log(service.login(cliente));
-})
+export { clienteService };

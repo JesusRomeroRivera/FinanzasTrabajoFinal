@@ -60,6 +60,13 @@ public class TiendaController {
 		return ResponseEntity.created(location).build();		
 	}
 	
+	@ApiOperation("Logea una Tienda")
+	@PostMapping(value = "/login")
+	public ResponseEntity<Tienda> login(@Valid @RequestBody Tienda Tienda){
+		Optional<Tienda> tienda_returned = TiendaService.login(Tienda);
+		return new ResponseEntity<Tienda>(tienda_returned.get(), HttpStatus.OK);		
+	}
+
 	@ApiOperation("Actualiza una Tienda")
 	@PutMapping
 	public ResponseEntity<Tienda> actualizar(@Valid @RequestBody Tienda Tienda) {		

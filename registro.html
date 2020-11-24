@@ -32,12 +32,12 @@
     <section class="establecimiento">
       <form class="form-container">
         <p class="establecimiento-text">Complete la siguiente información para registrarse correctamente:</p>
-        <input class="first-input" type="text" placeholder="Correo electrónico *" name="email" required>
-        <input type="pwd" placeholder="Contraseña *" name="psw" required>
-        <input type="name" placeholder="Nombre del establecimiento *" name="name" required>
-        <input type="phone" placeholder="Número del teléfono celular *" name="phone" required>
-        <input class="final-input" type="direc" placeholder="Dirección *" name="direc" required>
-        <button type="submit" class="btn btn-light register-button">Registrarte</button>
+        <input id="correo_tienda" class="first-input" type="text" placeholder="Correo electrónico *" name="email" required>
+        <input id="contraseña_tienda" type="password" placeholder="Contraseña *" name="psw" required>
+        <input id="nombre_tienda" type="name" placeholder="Nombre del establecimiento *" name="name" required>
+        <input id="documento_tienda" type="number" placeholder="Número del teléfono celular *" name="phone" required>
+        <input id="direccion_tienda" class="final-input" type="text" placeholder="Dirección *" name="direc" required>
+        <button type="button" class="btn btn-light register-button boton-registro-tienda">Registrarte</button>
         <p class="establecimiento-text-2">Al hacer click en "Registrarte", aceptas nuestras Condiciones, la Política de datos
           y la Política de cookies. Para verlas, haz click <i class="principal-button">aquí</i>.
         </p>
@@ -54,10 +54,10 @@
           <option value="DNI">DNI</option>
           <option value="CEX">CEX</option>
         </select>
-        <input id="documento" class="si-input" type="doc" placeholder="Documento *" name="phone" required>
+        <input id="documento_cliente" class="si-input" type="doc" placeholder="Documento *" name="phone" required>
         <input id="telefono" class="se-input" type="phone" placeholder="Número del teléfono celular *" name="phone" required>
-        <input id="direccion" class="final-input" type="direc" placeholder="Dirección *" name="direc" required>
-        <button type="submit" class="btn btn-light register-button boton-registro-clientes">Registrarte</button>
+        <input id="direccion_cliente" class="final-input" type="direc" placeholder="Dirección *" name="direc" required>
+        <button type="button" class="btn btn-light register-button boton-registro-clientes">Registrarte</button>
         <p class="clientes-text-2">Al hacer click en "Registrarte", aceptas nuestras Condiciones, la Política de datos
           y la Política de cookies. Para verlas, haz click <i class="principal-button2">aquí</i>.
         </p>
@@ -83,9 +83,41 @@
     <script src="script/script.js"></script>
 
     <script src="script/model/cliente.js"></script>
-    <script src="script/model/error.js"></script>
+    <script src="script/model/tienda.js"></script>
+    <script src="script/error.js"></script>
     <script src="script/http.js"></script>
     <script src="script/shared/var.constant.js"></script>
     <script src="script/service/cliente.service.js"></script>
+    <script src="script/service/tienda.service.js"></script>
+    <script>
+      const $btnRegisterTienda = document.querySelector('.boton-registro-tienda');
+      $btnRegisterTienda.addEventListener('click', () => {
+          var nombre = document.getElementById("nombre_tienda").value;
+          var correo = document.getElementById("correo_tienda").value;
+          var contraseña = document.getElementById("contraseña_tienda").value;
+          var direccion = document.getElementById("direccion_tienda").value;
+
+          var tienda = new Tienda( nombre, correo, direccion, contraseña);
+          var service = new tiendaService();
+          service.registrar(tienda);
+      })
+
+      const $btnRegisterCliente = document.querySelector('.boton-registro-clientes');
+      $btnRegisterCliente.addEventListener('click', () => {
+          var nombre = document.getElementById("nombre_cliente").value;
+          var apellido = document.getElementById("apellido_cliente").value;
+          var correo = document.getElementById("correo_cliente").value;
+          var contraseña = document.getElementById("contraseña_cliente").value;
+          var tipoDocumento = document.getElementById("tipo_documento").value;
+          var documento = document.getElementById("documento_cliente").value;
+          var telefono = document.getElementById("telefono").value;
+          var direccion = document.getElementById("direccion_cliente").value;
+
+          var cliente = new Cliente(documento, nombre, apellido, tipoDocumento, correo, direccion, contraseña, telefono);
+          
+          var service = new clienteService();
+          service.registrar(cliente);
+      })
+    </script>
   </body>
 </html>

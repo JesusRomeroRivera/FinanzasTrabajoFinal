@@ -144,3 +144,27 @@ $otherBackButton7.addEventListener('click', () => {
   $pagarDeudasSection.classList.toggle('not-active');
   $pagarDeudasSection.classList.toggle('is-active');
 })
+
+const $pagarEnSiSection = document.querySelector(".cobrar");
+const $pagarDefButton = document.querySelector(".pagarDeuda-button");
+
+let aux9 = true;
+
+$pagarDefButton.addEventListener('click', () => {
+  $pagarDeudasSection.classList.toggle('blur');
+  if(aux9) {
+    $pagarEnSiSection.classList.add('is-active');
+    aux9 = false;
+  }else{
+    $pagarEnSiSection.classList.toggle('not-active');
+    $pagarEnSiSection.classList.toggle('is-active');
+  }
+})
+
+const $otherBackButton8 = document.querySelector(".cobrar-back");
+
+$otherBackButton8.addEventListener('click', () => {
+  $pagarEnSiSection.classList.toggle('not-active');
+  $pagarEnSiSection.classList.toggle('is-active');
+  $pagarDeudasSection.classList.toggle('blur');
+})
