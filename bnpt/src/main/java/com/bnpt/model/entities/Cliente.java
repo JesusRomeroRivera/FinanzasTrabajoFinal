@@ -15,16 +15,16 @@ public class Cliente {
 	@Column(name = "categoria_documento", nullable = false, length = 3)
 	private String categoriaDocumento;
 
-	@Column(name = "nombre", nullable = false, length = 20)
+	@Column(name = "nombre", nullable = false, length = 50)
     private String nombre;
     
-    @Column(name = "apellido", nullable = false, length = 20)
+    @Column(name = "apellido", nullable = false, length = 50)
     private String apellido;
     
-    @Column(name = "direccion", nullable = false, length = 30)
+    @Column(name = "direccion", nullable = false, length = 100)
     private String direccion;
     
-    @Column(name = "correo", nullable = false, length = 20)
+    @Column(name = "correo", nullable = false, length = 50)
     private String correo;
     
     @Column(name = "telefono", nullable = false, length = 10)

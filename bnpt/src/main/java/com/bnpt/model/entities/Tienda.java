@@ -14,13 +14,13 @@ public class Tienda {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-	@Column(name = "nombre", nullable = false, length = 20)
+	@Column(name = "nombre", nullable = false, length = 50)
     private String nombre;
     
-    @Column(name = "direccion", nullable = false, length = 30)
+    @Column(name = "direccion", nullable = false, length = 100)
     private String direccion;
     
-    @Column(name = "correo", nullable = false, length = 20)
+    @Column(name = "correo", nullable = false, length = 50)
     private String correo;
 
     @Column(name = "password", nullable = false, length = 256)
